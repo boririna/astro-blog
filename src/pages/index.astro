@@ -1,10 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting.jsx';
+import BlogPost from '../components/BlogPost.astro';
+// import {Content as PromoBanner} from '../components/promoBanner.md';
 const pageTitle = "Home Page";
+const allPosts = await Astro.glob('../pages/posts/*.md');
 ---
 <BaseLayout pageTitle={pageTitle}>
   <h2>My awesome blog subtitle</h2>
   <!-- <Greeting messages={["Hi", "Hello", "Howdy", "Hey there"]} /> -->
-  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+  <Greeting client:load messages={["Привет", "Здравствуйте", "Добрый день", "Здорова"]} />
+  <p>Lessons A1-A2</p>
+  <ul>
+    {allPosts.map((post) => <BlogPost postUrl={post.url} postTitle={post.frontmatter.title}/>)}
+  </ul>
+  
+  <!-- <PromoBanner /> -->
 </BaseLayout>

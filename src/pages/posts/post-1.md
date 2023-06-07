@@ -1,24 +1,30 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'My First Blog Post'
+title: '1.Расскажите о себе.'
 pubDate: 2022-07-01
 description: 'This is the first post of my new Astro blog.'
 author: 'Irina Borisova'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png' 
     alt: 'The full Astro logo.'
-tags: ["astro", "blogging", "learning in public"]
+tags: ["A1 level", "A2 level", "persons"]
 ---
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
+## 1.Расскажите о себе. Почему вы изучаете русский язык? Какие еще языки вы знаете?
+## Прочитайте текст обо мне:
 
-## What I've accomplished
+<!-- |	 Текст 	|	 Слово 	|	 Перевод 	|
+|	 ----- 	|	 ----- 	|	 ----- 	|
+|	 Меня зовут Ирина. Я из России. Я родилась в городе Астрахань, но выросла в городе Волжский. Он находится около Волгограда. Я закончила институт по специальности прикладная математика и информатика, но никогда не работала по специальности. Я работала логистом, немного дизайнером интерьеров, потом преподавала английский и русский языки. Сейчас я изучаю разработку веб-приложений. 	|	 родиться 	|	 to be born 	|
+|	 Меня зовут Ирина. Я из России. Я родилась в городе Астрахань, но выросла в городе Волжский. Он находится около Волгограда. Я закончила институт по специальности прикладная математика и информатика, но никогда не работала по специальности. Я работала логистом, немного дизайнером интерьеров, потом преподавала английский и русский языки. Сейчас я изучаю разработку веб-приложений. 	|	 родиться 	|	 to be born 	| -->
 
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
-
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
-
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
-
-## What's next
-
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+<table class="post-table">
+    <tr>
+        <td>Меня зовут Ирина. Я из России. Я родилась в городе Астрахань, но выросла в городе Волжский. Он находится около Волгограда. Я закончила институт по специальности прикладная математика и информатика, но никогда не работала по специальности. Я работала логистом, немного дизайнером интерьеров, потом преподавала английский и русский языки. Сейчас я изучаю разработку веб-приложений.</td>
+        <td>
+            <table>
+                <td>родиться</td>
+                <td>to be born</td>
+            </table>
+        </td>
+    </tr>
+</table>
