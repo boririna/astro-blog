@@ -7,6 +7,8 @@ author: 'Irina Borisova'
 image:
     url: "/images/volzhskiy1.jpg" 
     alt: 'The full Astro logo.'
+audio:
+    src: "../../../public/1AboutYourself_text.m4a"
 tags: ["A1 level", "A2 level", "persons"]
 ---
 
@@ -58,11 +60,11 @@ tags: ["A1 level", "A2 level", "persons"]
     </tr>
 </table>
 
-<audio id="audio" controls muted src="../../../public/1AboutYourself_text.m4a">
+<!-- <audio id="audio" controls muted src="../../../public/1AboutYourself_text.m4a">
     Your browser does not support the audio element.
 </audio>
 
 <script>
     let myAudio = document.querySelector('#audio')
     myAudio.play()
-</script>
+</script> -->
