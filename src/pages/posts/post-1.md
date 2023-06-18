@@ -8,7 +8,7 @@ image:
     url: "/images/volzhskiy1.jpg" 
     alt: 'The full Astro logo.'
 audio:
-    src: "../../../public/1AboutYourself_text.m4a"
+    src: "/audio/1AboutYourself_text.m4a"
 tags: ["A1 level", "A2 level", "persons"]
 ---
 
