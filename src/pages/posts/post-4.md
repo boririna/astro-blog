@@ -6,6 +6,8 @@ description: "This post will show up on its own!"
 image: 
   url: "https://docs.astro.build/default-og-image.png"
   alt: "The word “astro” against an illustration of planets and stars."
+audio:
+    src: "../../../public/1AboutYourself_text.m4a"
 pubDate: 2022-08-08
 tags: ["astro", "successes"]
 ---

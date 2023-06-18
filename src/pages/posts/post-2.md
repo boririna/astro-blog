@@ -6,6 +6,8 @@ description: "After learning some Astro, I couldn't stop!"
 image: 
     url: "https://docs.astro.build/assets/arc.webp"
     alt: "Thumbnail of Astro arcs,"
+audio:
+    src: "../../../public/1AboutYourself_text.m4a"
 pubDate: 2022-07-08
 tags: ["astro", "blogging", "learning in public", "successes"]
 ---
