@@ -1,25 +1,36 @@
 ---
+import WordList from "../components/WordList.astro";
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
     <!-- <h1>Title: {frontmatter.title}</h1> -->
-    <!-- <p><em>{frontmatter.description}</em></p> -->
+    
     <p>Published on: {frontmatter.pubDate.slice(0,10)}</p>
     <p>Written by Irina Borisova</p>
-    <img src={frontmatter.image.url} width="500" alt={frontmatter.image.alt} />
+
+    <img class="lesson-mage" src={frontmatter.image.url} alt={frontmatter.image.alt} />
     
     <div class="tags">
         {frontmatter.tags.map((tag) => (
           <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
         ))}
     </div>
-    
-    <slot />
 
+    <h3>{frontmatter.description}</h3>
+    <div class="lesson">
+      <div class="lesson-text">
+        <slot />
+      </div>
+      <div class="lesson-words">
+        <WordList />
+      </div>
+    </div>
+    
+    <h3>Послушайте текст:</h3>
     <audio id="audio" controls muted src={frontmatter.audio.src}>
       Your browser does not support the audio element.
-  </audio>
+    </audio>
 </Baselayout>
 
 <style>
@@ -41,9 +52,43 @@ const { frontmatter } = Astro.props;
       font-size: 1.15em;
       background-color: #F8FCFD;
     }
+
+    .lesson-mage {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .lesson {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .lesson-text {
+      width: 100%;
+    }
+
+    .lesson-words {
+      width: 100%;
+      margin-top: 1em;
+    }
+
+    @media screen and (min-width: 636px) {
+      .lesson-text {
+        width: 60%;
+        padding-right: 10px;
+      }
+
+      .lesson-words {
+        width: 40%;
+        padding-left: 10px;
+        margin-top: 1em;
+      }
+    }
+
+
   </style>
 
-<script defer>
+<script>
   let myAudio = document.querySelector('#audio')
   myAudio.play();
 </script>

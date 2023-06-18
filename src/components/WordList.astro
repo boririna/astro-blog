@@ -1,0 +1,17 @@
+---
+// const words = ["Dog", "Cat", "Platypus"];
+import words from '../data/words.js';
+---
+<ul>
+  {words.map((word) => (
+    <li>{word.ru} - {word.en}</li>
+  ))}
+</ul>
+
+<style>
+    ul {
+        list-style-type:none;
+        padding: 0;
+        margin: 0;
+    }
+</style>
