@@ -59,12 +59,3 @@ tags: ["A1 level", "A2 level", "persons"]
         </td>
     </tr>
 </table>
-
-<!-- <audio id="audio" controls muted src="../../../public/1AboutYourself_text.m4a">
-    Your browser does not support the audio element.
-</audio>
-
-<script>
-    let myAudio = document.querySelector('#audio')
-    myAudio.play()
-</script> -->
