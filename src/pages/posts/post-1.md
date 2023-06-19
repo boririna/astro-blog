@@ -1,8 +1,9 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'Расскажите о себе. Почему вы изучаете русский язык? Какие еще языки вы знаете?'
+title: 'Расскажите о себе.'
+lesson_id: 'lesson1'
 pubDate: 2022-07-01
-description: 'Прочитайте текст обо мне:'
+description: ' Почему вы изучаете русский язык? Какие еще языки вы знаете?'
 author: 'Irina Borisova'
 image:
     url: "/images/volzhskiy1.jpg" 

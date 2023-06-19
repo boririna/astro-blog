@@ -5,7 +5,7 @@ const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
     <!-- <h1>Title: {frontmatter.title}</h1> -->
-    
+    <h2>{frontmatter.description}</h2>
     <p>Published on: {frontmatter.pubDate.slice(0,10)}</p>
     <p>Written by Irina Borisova</p>    
 
@@ -17,13 +17,13 @@ const { frontmatter } = Astro.props;
         ))}
     </div>
 
-    <h3>{frontmatter.description}</h3>
+    <h3>Прочитайте текст:</h3>
     <div class="lesson">
       <div id="lesson-text" class="lesson-text">
         <slot />
       </div>
       <div class="lesson-words">
-        <WordList />
+        <WordList lesson_id ={frontmatter.lesson_id}/>
       </div>
     </div>
     
