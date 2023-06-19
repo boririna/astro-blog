@@ -5,7 +5,7 @@ lesson_id: 'lesson2'
 author: Irina Borisova
 description: " Объясните, как вы добираетесь домой."
 image: 
-    url: "https://docs.astro.build/assets/arc.webp"
+    url: "/images/lesson2.jpg"
     alt: "Thumbnail of Astro arcs,"
 audio:
     src: "/audio/1AboutYourself_text.m4a"

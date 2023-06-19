@@ -6,8 +6,8 @@ const { frontmatter } = Astro.props;
 <BaseLayout pageTitle={frontmatter.title}>
     <!-- <h1>Title: {frontmatter.title}</h1> -->
     <h2>{frontmatter.description}</h2>
-    <p>Published on: {frontmatter.pubDate.slice(0,10)}</p>
-    <p>Written by Irina Borisova</p>    
+    <!-- <p>Published on: {frontmatter.pubDate.slice(0,10)}</p> -->
+    <!-- <p>Written by Irina Borisova</p>     -->
 
     <img class="lesson-image" src={frontmatter.image.url} alt={frontmatter.image.alt} />
     
@@ -55,7 +55,7 @@ const { frontmatter } = Astro.props;
     }
 
     .lesson-image {
-      max-width: 400px;
+      max-width: 500px;
       width: 100%;
       border-radius: .5em;
     }
