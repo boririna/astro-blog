@@ -4,7 +4,7 @@ import words from '../data/words.js';
 ---
 <ul>
   {words.map((word) => (
-    <li>{word.ru} - {word.en}</li>
+    <li><span>{word.ru}</span> - {word.en}</li>
   ))}
 </ul>
 
@@ -14,4 +14,15 @@ import words from '../data/words.js';
         padding: 0;
         margin: 0;
     }
+    
+    li:nth-child( odd ) span {
+        color: purple;
+        font-weight: bold;
+    }
+
+    li:nth-child( even ) span {
+        color: green;
+        font-weight: bold;
+    }
+
 </style>

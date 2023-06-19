@@ -7,9 +7,9 @@ const { frontmatter } = Astro.props;
     <!-- <h1>Title: {frontmatter.title}</h1> -->
     
     <p>Published on: {frontmatter.pubDate.slice(0,10)}</p>
-    <p>Written by Irina Borisova</p>
+    <p>Written by Irina Borisova</p>    
 
-    <img class="lesson-mage" src={frontmatter.image.url} alt={frontmatter.image.alt} />
+    <img class="lesson-image" src={frontmatter.image.url} alt={frontmatter.image.alt} />
     
     <div class="tags">
         {frontmatter.tags.map((tag) => (
@@ -19,7 +19,7 @@ const { frontmatter } = Astro.props;
 
     <h3>{frontmatter.description}</h3>
     <div class="lesson">
-      <div class="lesson-text">
+      <div id="lesson-text" class="lesson-text">
         <slot />
       </div>
       <div class="lesson-words">
@@ -32,6 +32,7 @@ const { frontmatter } = Astro.props;
       Your browser does not support the audio element.
     </audio>
 </Baselayout>
+
 
 <style>
     a {
@@ -53,9 +54,10 @@ const { frontmatter } = Astro.props;
       background-color: #F8FCFD;
     }
 
-    .lesson-mage {
+    .lesson-image {
       max-width: 400px;
       width: 100%;
+      border-radius: .5em;
     }
 
     .lesson {
@@ -78,6 +80,10 @@ const { frontmatter } = Astro.props;
         padding-right: 10px;
       }
 
+      .lesson-text > p > span {
+        color: green;
+      }
+
       .lesson-words {
         width: 40%;
         padding-left: 10px;
@@ -91,4 +97,32 @@ const { frontmatter } = Astro.props;
 <script>
   let myAudio = document.querySelector('#audio')
   myAudio.play();
+
+  function highlightWords(text, words) {
+    console.log(words.length)
+    for (let i = 0; i < words.length; i++) {
+      let word = words[i].word_in_text;
+      let word_color = "purple";
+      if( i % 2 === 1) {
+        word_color = "green"
+      }
+      // let word_color = words[i].word_color;
+      if (word) {                
+        text = text.replaceAll(word, `<span style="color: ${word_color}; font-weight: bold;">${word}</span>`);
+      }
+    }
+    return text;
+  }
+
+  import words from '../data/words.js';
+
+  function loadWords() {
+
+    let e = document.getElementById("lesson-text");
+    e.innerHTML = highlightWords(e.innerHTML, words);
+    e.style.display = 'none';
+    e.style.display = 'block';
+  }
+  loadWords();
+
 </script>
